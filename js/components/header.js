@@ -16,6 +16,7 @@ export function header() {
       : location.pathname;
   let linksHTML = "";
 
+  console.log(currentPage);
   for (const link of menu) {
     let activePage = "";
     if (link.href === currentPage) {
