@@ -29,7 +29,7 @@ export function header() {
     }
   }
 
-  const HTML = `
+  let HTML = `
     <header class="main-header">
       <img class="logo" src="../food/pizza.webp" alt="Logo" />
       <nav class="main-nav">${linksHTML}</nav>
@@ -37,7 +37,7 @@ export function header() {
     `;
 
   if (location.pathname === "/_54-grupe_dom/") {
-    const HTML = `
+    HTML = `
     <header class="main-header">
       <img class="logo" src="./food/pizza.webp" alt="Logo" />
       <nav class="main-nav">${linksHTML}</nav>
