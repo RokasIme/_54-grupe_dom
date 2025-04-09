@@ -31,10 +31,19 @@ export function header() {
 
   const HTML = `
     <header class="main-header">
+      <img class="logo" src="../food/pizza.webp" alt="Logo" />
+      <nav class="main-nav">${linksHTML}</nav>
+    </header>
+    `;
+
+  if (location.pathname === "/_54-grupe_dom/") {
+    const HTML = `
+    <header class="main-header">
       <img class="logo" src="./food/pizza.webp" alt="Logo" />
       <nav class="main-nav">${linksHTML}</nav>
     </header>
     `;
+  }
 
   document.body.insertAdjacentHTML("afterbegin", HTML);
 }
