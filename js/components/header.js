@@ -21,6 +21,11 @@ export function header() {
     if (link.href === currentPage) {
       activePage = "active";
     }
+    // pathname: "/_54-grupe_dom/food/"
+    if (link.href === currentPage.slice(14, -1)) {
+      activePage = "active";
+    }
+
     if (location.pathname === "/_54-grupe_dom/") {
       linksHTML += `<a class="link ${activePage}" href=".${link.href}">${link.text}</a> `;
     } else {
