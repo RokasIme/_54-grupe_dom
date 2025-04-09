@@ -21,13 +21,19 @@ export function header() {
     if (link.href === currentPage) {
       activePage = "active";
     }
-    linksHTML += `<a class="link ${activePage}" href=".${link.href}">${link.text}</a> `;
+    if (currentPage.length > 1) {
+      linksHTML += `<a class="link ${activePage}" href="..${link.href}">${link.text}</a> `;
+    } else {
+      linksHTML += `<a class="link ${activePage}" href=".${link.href}">${link.text}</a> `;
+    }
   }
+
   const HTML = `
     <header class="main-header">
       <img class="logo" src="./food/pizza.webp" alt="Logo" />
       <nav class="main-nav">${linksHTML}</nav>
     </header>
     `;
+
   document.body.insertAdjacentHTML("afterbegin", HTML);
 }
