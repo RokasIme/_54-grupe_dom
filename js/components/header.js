@@ -16,19 +16,6 @@ export function header() {
       : location.pathname;
   let linksHTML = "";
 
-  console.log(currentPage);
-  for (const link of menu) {
-    let activePage = "";
-    if (link.href === currentPage) {
-      activePage = "active";
-    }
-    if (location.pathname === "/_54-grupe_dom/") {
-      linksHTML += `<a class="link ${activePage}" href=".${link.href}">${link.text}</a> `;
-    } else {
-      linksHTML += `<a class="link ${activePage}" href="..${link.href}">${link.text}</a> `;
-    }
-  }
-
   let HTML = `
     <header class="main-header">
       <img class="logo" src="../food/pizza.webp" alt="Logo" />
@@ -36,13 +23,22 @@ export function header() {
     </header>
     `;
 
-  if (location.pathname === "/_54-grupe_dom/") {
-    HTML = `
+  for (const link of menu) {
+    let activePage = "";
+    if (link.href === currentPage) {
+      activePage = "active";
+    }
+    if (location.pathname === "/_54-grupe_dom/") {
+      linksHTML += `<a class="link ${activePage}" href=".${link.href}">${link.text}</a> `;
+      HTML = `
     <header class="main-header">
       <img class="logo" src="./food/pizza.webp" alt="Logo" />
       <nav class="main-nav">${linksHTML}</nav>
     </header>
     `;
+    } else {
+      linksHTML += `<a class="link ${activePage}" href="..${link.href}">${link.text}</a> `;
+    }
   }
 
   document.body.insertAdjacentHTML("afterbegin", HTML);
