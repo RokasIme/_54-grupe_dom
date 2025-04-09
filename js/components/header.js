@@ -21,11 +21,11 @@ export function header() {
     if (link.href === currentPage) {
       activePage = "active";
     }
-    linksHTML += `<a class="link ${activePage}" href="${link.href}">${link.text}</a> `;
+    linksHTML += `<a class="link ${activePage}" href=".${link.href}">${link.text}</a> `;
   }
   const HTML = `
     <header class="main-header">
-      <img class="logo" src="../food/pizza.webp" alt="Logo" />
+      <img class="logo" src="./food/pizza.webp" alt="Logo" />
       <nav class="main-nav">${linksHTML}</nav>
     </header>
     `;
