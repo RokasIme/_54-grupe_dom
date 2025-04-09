@@ -22,10 +22,10 @@ export function header() {
     if (link.href === currentPage) {
       activePage = "active";
     }
-    if (currentPage.length > 1) {
-      linksHTML += `<a class="link ${activePage}" href="..${link.href}">${link.text}</a> `;
-    } else {
+    if (location.pathname === "/_54-grupe_dom/") {
       linksHTML += `<a class="link ${activePage}" href=".${link.href}">${link.text}</a> `;
+    } else {
+      linksHTML += `<a class="link ${activePage}" href="..${link.href}">${link.text}</a> `;
     }
   }
 
