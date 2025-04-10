@@ -19,6 +19,7 @@ export function header() {
     { text: "Darzas", href: "/darzas/" },
     { text: "Header", href: "/header/" },
     { text: "Click", href: "/click/" },
+    { text: "Like", href: "/like/" },
   ];
 
   let linksHTML = "";
