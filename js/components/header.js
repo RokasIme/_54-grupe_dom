@@ -5,7 +5,7 @@ export function header() {
   if (location.hostname !== "localhost") {
     projectName = "/_54-grupe_dom";
     // projectName = '/' + location.pathname.split('/')[1];
-    base = "https://github.com/RokasIme/_54-grupe_dom/";
+    base = "https://rokasime.github.io/_54-grupe_dom/";
     // base = location.origin + projectName
   }
   document.head.insertAdjacentHTML("afterbegin", `<base href ="${base}">`);
